@@ -1,0 +1,45 @@
+<h1>Products</h1>
+<form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Products Name</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <input nz-input formControlName="productName" placeholder="Computadora" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Description</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <input nz-input formControlName="description" placeholder="----" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Location</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <input nz-input formControlName="location" placeholder="Sala 17" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSm]="8" [nzXs]="24" nzRequired>Hire Date</nz-form-label>
+    <nz-form-control [nzSm]="16" [nzXs]="24">
+      <nz-date-picker formControlName="hireDate"></nz-date-picker>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Quantity</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+<nz-input-number formControlName="quantity" [nzMin]="0" [nzMax]="100000" [nzStep]="1"></nz-input-number>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Price</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+<nz-input-number formControlName="price" [nzMin]="0" [nzMax]="100000" [nzStep]="10"></nz-input-number>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control [nzXs]="{ span: 24, offset: 0 }" [nzSm]="{ span: 16, offset: 8 }">
+      <button nz-button nzType="primary">Submit</button>
+    </nz-form-control>
+  </nz-form-item>
+
+</form>
